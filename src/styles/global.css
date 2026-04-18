@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #041A49;
+  --color-navy-light: #0A2A6B;
+  --color-orange: #F95905;
+  --color-orange-dark: #D94A00;
+  --color-light-grey: #F2F1F0;
+
+  --color-dark-text: #0F172A;
+  --color-slate-600: #475569;
+  --color-slate-300: #CBD5E1;
+  --color-slate-100: #F1F5F9;
+  --color-slate-50: #F8FAFC;
+
+  --color-alert: #FA2D2D;
+  --color-success: #10B981;
+
+  --font-display: "Funnel Display", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Rethink Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --text-h1: 4rem;
+  --text-h1--line-height: 1.05;
+  --text-h1--letter-spacing: -0.02em;
+
+  --text-h2: 3rem;
+  --text-h2--line-height: 1.1;
+  --text-h2--letter-spacing: -0.015em;
+
+  --text-h3: 2.25rem;
+  --text-h3--line-height: 1.2;
+
+  --text-h4: 1.5rem;
+  --text-h4--line-height: 1.3;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-dark-text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: #ffffff;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--color-navy);
+  }
+
+  a {
+    color: var(--color-orange);
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    color: var(--color-orange-dark);
+  }
+}

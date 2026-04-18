@@ -1,0 +1,198 @@
+---
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Container from "../components/Container.astro";
+import Section from "../components/Section.astro";
+import Card from "../components/Card.astro";
+
+const principles = [
+  {
+    title: "Construim pentru cei din tranșee",
+    text: "Nu suntem eroii poveștii, suntem suportul lor. Construim unelte care îi conectează și le fac viața mai ușoară.",
+  },
+  {
+    title: "Pornește de la durere",
+    text: "Nu decidem ce construim pe baza entuziasmului nostru. Întrebăm, ascultăm, verificăm.",
+  },
+  {
+    title: "O problemă reală bate o idee strălucită",
+    text: "Construim ce doare, nu ce pare interesant.",
+  },
+  {
+    title: "Conectează, nu izola",
+    text: "Fiecare proiect ar trebui să aducă mai mulți actori la aceeași masă. Animalele sunt fericite când toți actorii stau la aceeași masă.",
+  },
+  {
+    title: "Prevenția bate reacția",
+    text: "Nu suntem pompieri. Construim sisteme care previn incendiile.",
+  },
+  {
+    title: "Imperfect și livrat bate perfect și planificat",
+    text: "Un instrument simplu ajuns rapid în mâinile oamenilor valorează mai mult decât o platformă completă livrată în 6 luni.",
+  },
+  {
+    title: "Livrează des, livrează mic",
+    text: "Lansăm rapid, învățăm din ce se întâmplă, îmbunătățim. Mic și des bate mare și rar.",
+  },
+  {
+    title: "Transparent bate perfect",
+    text: "Cod deschis. Decizii documentate. Date publice. Erori asumate public. Dacă nu putem arăta ce facem și de ce, nu ar trebui să o facem.",
+  },
+];
+
+const founders = [
+  {
+    name: "Gălățeanu Dragoș-Costin",
+    role: "Președinte fondator",
+  },
+  {
+    name: "Coman Cosmin-Alexandru",
+    role: "Fondator",
+  },
+  {
+    name: "Samoilescu Tudor",
+    role: "Fondator",
+  },
+];
+---
+<BaseLayout
+  title="Despre — Build 4 Paws"
+  description="Tech NGO fondat de developeri, născut la intersecția dintre tehnologie și bunăstarea animalelor."
+>
+  <!-- Hero -->
+  <Section tone="navy" class="!pt-28 md:!pt-36 !pb-20">
+    <Container>
+      <div class="max-w-3xl">
+        <p class="text-orange font-medium mb-6 uppercase tracking-wider text-sm">Despre noi</p>
+        <h1 class="text-h1 !text-white mb-6">
+          Tech NGO, fondat de developeri.
+        </h1>
+        <p class="text-xl text-slate-300 leading-relaxed">
+          Ne-am născut la intersecția dintre tehnologie și bunăstarea animalelor
+          pentru a livra soluții moderne, eficiente și transparente.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Purpose + Vision -->
+  <Section tone="default">
+    <Container>
+      <div class="grid md:grid-cols-2 gap-10">
+        <Card class="!p-10">
+          <p class="text-orange font-medium mb-3 uppercase tracking-wider text-sm">Purpose</p>
+          <h2 class="text-h3 mb-4">De ce existăm</h2>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            Construim infrastructura software de înaltă performanță care unește
+            <strong class="text-navy">ONG-urile, cetățenii, veterinarii și autoritățile</strong>
+            pentru bunăstarea animalelor.
+          </p>
+        </Card>
+        <Card class="!p-10 !bg-navy !border-navy">
+          <p class="text-orange font-medium mb-3 uppercase tracking-wider text-sm">Vision</p>
+          <h2 class="text-h3 !text-white mb-4">Unde mergem</h2>
+          <p class="text-lg text-slate-300 leading-relaxed">
+            Un ecosistem digital perfect conectat, în care tehnologia garantează
+            că <strong class="text-white">niciun animal nu e lăsat în urmă</strong>.
+          </p>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- ADN — 8 principii -->
+  <Section tone="muted">
+    <Container>
+      <div class="mb-16 max-w-3xl">
+        <p class="text-orange font-medium mb-4 uppercase tracking-wider text-sm">ADN-ul Build 4 Paws</p>
+        <h2 class="text-h2 mb-6">Cum decidem ce construim.</h2>
+        <p class="text-lg text-slate-600 leading-relaxed">
+          Opt principii de lucru. Nu sunt postere pe perete — sunt filtrul prin care
+          trec toate deciziile noastre.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        {principles.map((p, i) => (
+          <div class="bg-white rounded-xl p-8 border border-slate-100">
+            <div class="flex items-start gap-5">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center text-orange font-display font-semibold">
+                {String(i + 1).padStart(2, "0")}
+              </div>
+              <div>
+                <h3 class="text-h4 mb-2">{p.title}</h3>
+                <p class="text-slate-600 leading-relaxed">{p.text}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Fondatori -->
+  <Section tone="default">
+    <Container>
+      <div class="mb-12 max-w-3xl">
+        <p class="text-orange font-medium mb-4 uppercase tracking-wider text-sm">Fondatori</p>
+        <h2 class="text-h2 mb-6">Cine suntem.</h2>
+        <p class="text-lg text-slate-600 leading-relaxed">
+          Suntem developeri care au ales să folosim ce știm să facem cel mai bine —
+          să construim software — pentru o cauză care are nevoie de asta.
+        </p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        {founders.map((f) => (
+          <Card class="!p-8">
+            <div class="w-12 h-12 rounded-full bg-navy flex items-center justify-center mb-4">
+              <Icon name="lucide:user" class="w-6 h-6 text-white" />
+            </div>
+            <h3 class="text-h4 mb-1">{f.name}</h3>
+            <p class="text-slate-600">{f.role}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Info juridică -->
+  <Section tone="navy">
+    <Container>
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="md:col-span-1">
+          <p class="text-orange font-medium mb-4 uppercase tracking-wider text-sm">Transparență</p>
+          <h2 class="text-h2 !text-white mb-6">Informații juridice.</h2>
+          <p class="text-slate-300 leading-relaxed">
+            Transparent prin default. Dacă nu putem arăta ce facem și de ce, nu ar trebui să o facem.
+          </p>
+        </div>
+        <div class="md:col-span-2 grid sm:grid-cols-2 gap-6 text-slate-300">
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-orange font-medium mb-2">Denumire</dt>
+            <dd>Asociația Build 4 Paws</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-orange font-medium mb-2">Formă juridică</dt>
+            <dd>Persoană juridică de drept privat, fără scop patrimonial (OG 26/2000)</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-orange font-medium mb-2">Înregistrare</dt>
+            <dd>Încheiere nr. 217/2026, 21.01.2026<br />Judecătoria Alba Iulia</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-orange font-medium mb-2">Durată</dt>
+            <dd>Nedeterminată</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-orange font-medium mb-2">CUI</dt>
+            <dd class="italic text-slate-400">În curs de obținere</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-orange font-medium mb-2">Contact</dt>
+            <dd><a href="mailto:contact@build4paws.ro" class="hover:text-orange">contact@build4paws.ro</a></dd>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

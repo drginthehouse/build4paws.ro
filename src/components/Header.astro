@@ -1,0 +1,57 @@
+---
+import Container from "./Container.astro";
+
+const nav = [
+  { href: "/", label: "Acasă" },
+  { href: "/despre", label: "Despre" },
+  { href: "/proiecte", label: "Proiecte" },
+  { href: "/contact", label: "Contact" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+<header class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 backdrop-blur">
+  <Container class="flex h-20 items-center justify-between">
+    <a href="/" class="flex items-center" aria-label="Build 4 Paws — Acasă">
+      <img src="/logo/logo-horizontal.svg" alt="Build 4 Paws" class="h-8 w-auto md:h-9" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      {nav.map(({ href, label }) => {
+        const isActive = currentPath === href || (href !== "/" && currentPath.startsWith(href));
+        return (
+          <a
+            href={href}
+            class={`font-medium no-underline transition-colors ${
+              isActive ? "text-orange" : "text-navy hover:text-orange"
+            }`}
+          >
+            {label}
+          </a>
+        );
+      })}
+    </nav>
+    <button
+      type="button"
+      class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md text-navy"
+      aria-label="Meniu"
+      data-mobile-menu-toggle
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+    </button>
+  </Container>
+  <div class="md:hidden hidden border-t border-slate-100 bg-white" data-mobile-menu>
+    <Container class="py-4 flex flex-col gap-4">
+      {nav.map(({ href, label }) => (
+        <a href={href} class="font-medium text-navy no-underline py-2">{label}</a>
+      ))}
+    </Container>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector("[data-mobile-menu-toggle]");
+  const menu = document.querySelector("[data-mobile-menu]");
+  toggle?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+  });
+</script>

@@ -1,0 +1,162 @@
+---
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Container from "../components/Container.astro";
+import Section from "../components/Section.astro";
+import Card from "../components/Card.astro";
+
+const channels = [
+  {
+    icon: "lucide:mail",
+    label: "Email",
+    value: "contact@build4paws.ro",
+    href: "mailto:contact@build4paws.ro",
+    note: "Cel mai rapid canal. Răspundem în 2-3 zile lucrătoare.",
+  },
+  {
+    icon: "lucide:github",
+    label: "GitHub",
+    value: "github.com/Build4Paws",
+    href: "https://github.com/Build4Paws",
+    note: "Cod, issues, discuții tehnice. Totul deschis.",
+  },
+];
+
+const audiences = [
+  {
+    icon: "lucide:users",
+    title: "ONG-uri",
+    text: "Ai o problemă recurentă pe care tehnologia ar putea să o rezolve? Vrem să auzim.",
+  },
+  {
+    icon: "lucide:stethoscope",
+    title: "Veterinari",
+    text: "Lucrezi cu ONG-uri și simți că procesele sunt prost organizate? Scrie-ne.",
+  },
+  {
+    icon: "lucide:landmark",
+    title: "Autorități",
+    text: "Ai nevoie de unelte de transparență sau date pentru politici publice? Colaborăm.",
+  },
+  {
+    icon: "lucide:code",
+    title: "Developeri",
+    text: "Vrei să contribui cu cod, design sau research? Repo-urile sunt deschise.",
+  },
+];
+---
+<BaseLayout
+  title="Contact — Build 4 Paws"
+  description="Ia legătura cu Build 4 Paws — tech NGO pentru bunăstarea animalelor."
+>
+  <!-- Hero -->
+  <Section tone="navy" class="!pt-28 md:!pt-36 !pb-20">
+    <Container>
+      <div class="max-w-3xl">
+        <p class="text-orange font-medium mb-6 uppercase tracking-wider text-sm">Contact</p>
+        <h1 class="text-h1 !text-white mb-6">
+          Spune-ne unde doare.
+        </h1>
+        <p class="text-xl text-slate-300 leading-relaxed">
+          Nu decidem ce construim pe baza entuziasmului nostru.
+          Întrebăm, ascultăm, verificăm. Începe cu un email.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Canale -->
+  <Section tone="default">
+    <Container>
+      <div class="grid gap-6 md:grid-cols-2 mb-16">
+        {channels.map((c) => (
+          <a
+            href={c.href}
+            target={c.href.startsWith("http") ? "_blank" : undefined}
+            rel={c.href.startsWith("http") ? "noopener" : undefined}
+            class="no-underline group"
+          >
+            <Card class="!p-8 h-full hover:!border-orange transition-colors">
+              <div class="flex items-start gap-5">
+                <div class="shrink-0 w-12 h-12 rounded-lg bg-navy flex items-center justify-center group-hover:bg-orange transition-colors">
+                  <Icon name={c.icon} class="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-1">{c.label}</p>
+                  <p class="text-h4 !text-navy !mb-2 group-hover:!text-orange transition-colors">{c.value}</p>
+                  <p class="text-slate-600 leading-relaxed">{c.note}</p>
+                </div>
+              </div>
+            </Card>
+          </a>
+        ))}
+      </div>
+
+      <!-- Cine ar trebui să ne scrie -->
+      <div class="mb-12 max-w-3xl">
+        <p class="text-orange font-medium mb-4 uppercase tracking-wider text-sm">Cine ar trebui să ne scrie</p>
+        <h2 class="text-h2 mb-6">Construim pentru cei din tranșee.</h2>
+        <p class="text-lg text-slate-600 leading-relaxed">
+          Dacă te recunoști în vreuna din descrierile de mai jos, avem o conversație de purtat.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {audiences.map((a) => (
+          <Card class="!p-6 h-full">
+            <div class="w-10 h-10 rounded-lg bg-light-grey flex items-center justify-center mb-4">
+              <Icon name={a.icon} class="w-5 h-5 text-navy" />
+            </div>
+            <h3 class="font-display font-semibold text-navy text-lg mb-2">{a.title}</h3>
+            <p class="text-slate-600 leading-relaxed text-sm">{a.text}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Info legală -->
+  <Section tone="muted">
+    <Container>
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="md:col-span-1">
+          <p class="text-orange font-medium mb-4 uppercase tracking-wider text-sm">Informații juridice</p>
+          <h2 class="text-h3 mb-4">Pentru colaborări oficiale.</h2>
+          <p class="text-slate-600 leading-relaxed">
+            Dacă reprezinți o autoritate, ONG partener sau donator, datele de identificare ale asociației sunt aici.
+          </p>
+        </div>
+        <div class="md:col-span-2">
+          <Card class="!p-8">
+            <dl class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <dt class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">Denumire</dt>
+                <dd class="text-navy font-medium">Asociația Build 4 Paws</dd>
+              </div>
+              <div>
+                <dt class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">Formă juridică</dt>
+                <dd class="text-slate-600">Asociație fără scop patrimonial (OG 26/2000)</dd>
+              </div>
+              <div>
+                <dt class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">Hotărâre</dt>
+                <dd class="text-slate-600">Nr. 217/2026, 21.01.2026<br />Judecătoria Alba Iulia</dd>
+              </div>
+              <div>
+                <dt class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">CUI</dt>
+                <dd class="text-slate-600 italic">În curs de obținere</dd>
+              </div>
+              <div>
+                <dt class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">Email oficial</dt>
+                <dd><a href="mailto:contact@build4paws.ro" class="text-orange no-underline hover:underline">contact@build4paws.ro</a></dd>
+              </div>
+              <div>
+                <dt class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">Site</dt>
+                <dd><a href="https://build4paws.ro" class="text-orange no-underline hover:underline">build4paws.ro</a></dd>
+              </div>
+            </dl>
+          </Card>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

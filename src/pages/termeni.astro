@@ -1,0 +1,114 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Container from "../components/Container.astro";
+import Section from "../components/Section.astro";
+
+const lastUpdated = "18 aprilie 2026";
+---
+<BaseLayout
+  title="Termeni de utilizare — Build 4 Paws"
+  description="Termeni și condiții de utilizare a site-ului build4paws.ro."
+>
+  <Section tone="navy" class="!pt-28 md:!pt-36 !pb-16">
+    <Container>
+      <div class="max-w-3xl">
+        <p class="text-orange font-medium mb-6 uppercase tracking-wider text-sm">Legal</p>
+        <h1 class="text-h1 !text-white mb-4">Termeni de utilizare</h1>
+        <p class="text-slate-300">Ultima actualizare: {lastUpdated}</p>
+      </div>
+    </Container>
+  </Section>
+
+  <Section tone="default">
+    <Container class="max-w-3xl">
+      <div class="space-y-10 text-slate-600 leading-relaxed">
+        <div>
+          <h2 class="text-h3 mb-4">1. Identificare</h2>
+          <p class="mb-2">
+            Site-ul <strong class="text-navy">build4paws.ro</strong> este operat de
+            <strong class="text-navy">Asociația Build 4 Paws</strong>, persoană juridică fără scop patrimonial,
+            constituită în baza OG 26/2000.
+          </p>
+          <p>Hotărâre nr. 217/2026, 21.01.2026, Judecătoria Alba Iulia.</p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">2. Acceptarea termenilor</h2>
+          <p>
+            Prin accesarea site-ului, accepți acești termeni. Dacă nu ești de acord cu vreuna din prevederi,
+            te rugăm să nu utilizezi site-ul.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">3. Conținut</h2>
+          <p>
+            Informațiile prezentate pe site au caracter orientativ și sunt actualizate periodic.
+            Build 4 Paws depune eforturi pentru acuratețea conținutului, dar nu garantează
+            că informațiile sunt complete sau lipsite de erori la orice moment.
+            Nu ne asumăm răspunderea pentru decizii luate exclusiv pe baza acestor informații.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">4. Proprietate intelectuală</h2>
+          <h3 class="text-h4 mb-2 mt-6">Codul site-ului</h3>
+          <p class="mb-4">
+            Codul sursă al site-ului este publicat pe
+            <a href="https://github.com/Build4Paws" class="text-orange" target="_blank" rel="noopener">github.com/Build4Paws</a>
+            sub licență MIT. Poți reutiliza, modifica și redistribui codul conform termenilor acelei licențe.
+          </p>
+
+          <h3 class="text-h4 mb-2 mt-6">Brand și identitate vizuală</h3>
+          <p>
+            Logo-ul, denumirea <strong class="text-navy">Build 4 Paws</strong>, paleta vizuală și toate elementele de brand
+            sunt proprietatea Asociației Build 4 Paws. Nu pot fi folosite fără acord scris prealabil,
+            cu excepția linkurilor și referirilor de natură jurnalistică sau educațională
+            care identifică asociația drept sursă.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">5. Linkuri externe</h2>
+          <p>
+            Site-ul poate conține linkuri către resurse externe (GitHub, parteneri, resurse educaționale).
+            Nu controlăm conținutul acestor site-uri și nu ne asumăm răspunderea pentru el.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">6. Date personale</h2>
+          <p>
+            Procesarea datelor personale este descrisă în
+            <a href="/privacy" class="text-orange">Politica de confidențialitate</a>.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">7. Modificări</h2>
+          <p>
+            Ne rezervăm dreptul de a modifica acești termeni. Versiunea actualizată este publicată
+            pe această pagină, cu data actualizării.
+            Continuarea utilizării site-ului după modificări echivalează cu acceptarea termenilor revizuiți.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">8. Lege aplicabilă</h2>
+          <p>
+            Acești termeni sunt guvernați de legea română.
+            Orice dispută va fi soluționată de instanțele competente din România.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">9. Contact</h2>
+          <p>
+            Pentru întrebări legate de acești termeni, scrie-ne la
+            <a href="mailto:contact@build4paws.ro" class="text-orange">contact@build4paws.ro</a>.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

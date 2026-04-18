@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Container from "../components/Container.astro";
+import Section from "../components/Section.astro";
+
+const lastUpdated = "18 aprilie 2026";
+---
+<BaseLayout
+  title="Politica de confidențialitate — Build 4 Paws"
+  description="Cum procesăm (sau nu procesăm) datele tale pe build4paws.ro."
+>
+  <Section tone="navy" class="!pt-28 md:!pt-36 !pb-16">
+    <Container>
+      <div class="max-w-3xl">
+        <p class="text-orange font-medium mb-6 uppercase tracking-wider text-sm">Legal</p>
+        <h1 class="text-h1 !text-white mb-4">Politica de confidențialitate</h1>
+        <p class="text-slate-300">Ultima actualizare: {lastUpdated}</p>
+      </div>
+    </Container>
+  </Section>
+
+  <Section tone="default">
+    <Container class="max-w-3xl">
+      <div class="space-y-10 text-slate-600 leading-relaxed">
+        <div>
+          <h2 class="text-h3 mb-4">Pe scurt</h2>
+          <p>
+            Site-ul <strong class="text-navy">build4paws.ro</strong> este un site static de prezentare.
+            Nu colectăm date personale prin formulare și nu folosim cookie-uri de tracking.
+            Singurele date procesate sunt cele inerente oricărei navigări pe web (adresa IP,
+            user agent, momentul accesării), necesare furnizorilor noștri pentru a livra pagina.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">Operator de date</h2>
+          <p class="mb-2">Asociația Build 4 Paws</p>
+          <p class="mb-2">Persoană juridică fără scop patrimonial (OG 26/2000)</p>
+          <p class="mb-2">Încheiere nr. 217/2026, 21.01.2026, Judecătoria Alba Iulia</p>
+          <p>Contact: <a href="mailto:contact@build4paws.ro" class="text-orange">contact@build4paws.ro</a></p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">Ce date procesăm</h2>
+          <h3 class="text-h4 mb-2 mt-6">Date tehnice (prin hosting)</h3>
+          <p class="mb-4">
+            Site-ul este găzduit pe <strong class="text-navy">Cloudflare Pages</strong>.
+            Cloudflare procesează adresa IP, user agent-ul și informațiile de request pentru a livra pagina
+            și pentru protecție anti-abuz.
+            Vezi <a href="https://www.cloudflare.com/privacypolicy/" class="text-orange" target="_blank" rel="noopener">politica Cloudflare</a>.
+          </p>
+
+          <h3 class="text-h4 mb-2 mt-6">Fonturi (Google Fonts)</h3>
+          <p class="mb-4">
+            Folosim <strong class="text-navy">Google Fonts</strong> pentru a livra tipografia site-ului.
+            Când deschizi o pagină, browser-ul tău face o cerere către serverele Google, care poate
+            expune adresa IP. Dacă preferi să nu folosești Google Fonts, poți bloca
+            domeniul <code>fonts.googleapis.com</code> prin extensii de browser.
+            Vezi <a href="https://policies.google.com/privacy" class="text-orange" target="_blank" rel="noopener">politica Google</a>.
+          </p>
+
+          <h3 class="text-h4 mb-2 mt-6">Comunicări prin email</h3>
+          <p>
+            Dacă ne contactezi la <a href="mailto:contact@build4paws.ro" class="text-orange">contact@build4paws.ro</a>,
+            vom procesa adresa ta de email și conținutul mesajului <em>exclusiv</em> pentru a-ți răspunde și
+            a gestiona relația creată. Nu le folosim pentru marketing. Nu le cedăm terților.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">Cookie-uri</h2>
+          <p>
+            Nu folosim cookie-uri pentru tracking, analytics sau publicitate.
+            Furnizorii noștri (Cloudflare, Google Fonts) pot seta cookie-uri tehnice strict necesare.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">Drepturile tale (GDPR)</h2>
+          <p class="mb-4">
+            Conform Regulamentului (UE) 2016/679, ai următoarele drepturi:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Dreptul de acces la datele tale</li>
+            <li>Dreptul la rectificare</li>
+            <li>Dreptul la ștergere ("dreptul de a fi uitat")</li>
+            <li>Dreptul la restricționarea prelucrării</li>
+            <li>Dreptul la portabilitatea datelor</li>
+            <li>Dreptul la opoziție</li>
+            <li>Dreptul de a depune plângere la ANSPDCP (<a href="https://www.dataprotection.ro" class="text-orange" target="_blank" rel="noopener">dataprotection.ro</a>)</li>
+          </ul>
+          <p class="mt-4">
+            Pentru exercitarea acestor drepturi, scrie-ne la
+            <a href="mailto:contact@build4paws.ro" class="text-orange">contact@build4paws.ro</a>.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-h3 mb-4">Modificări</h2>
+          <p>
+            Dacă schimbăm această politică, actualizăm data de mai sus.
+            Modificările sunt publicate pe această pagină — fără notificare individuală.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

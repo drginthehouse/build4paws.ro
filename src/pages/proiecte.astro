@@ -1,0 +1,182 @@
+---
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Container from "../components/Container.astro";
+import Section from "../components/Section.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+
+const futureIdeas = [
+  {
+    icon: "lucide:clipboard-list",
+    title: "Instrumente pentru ONG-uri",
+    text: "Management de cazuri, tracking adopții, rapoarte financiare, comunicare cu donatori.",
+  },
+  {
+    icon: "lucide:landmark",
+    title: "Civic tech pentru autorități",
+    text: "Dashboards publice, registre deschise, unelte de transparență pentru primării și DSVSA.",
+  },
+  {
+    icon: "lucide:network",
+    title: "Integrări între piloni",
+    text: "ONG → veterinar → cetățean → autoritate. Un flux, nu patru silozuri.",
+  },
+];
+---
+<BaseLayout
+  title="Proiecte — Build 4 Paws"
+  description="Proiectele pe care le construim acum și cele aflate în explorare. Transparent prin default."
+>
+  <!-- Hero -->
+  <Section tone="navy" class="!pt-28 md:!pt-36 !pb-20">
+    <Container>
+      <div class="max-w-3xl">
+        <p class="text-orange font-medium mb-6 uppercase tracking-wider text-sm">Proiecte</p>
+        <h1 class="text-h1 !text-white mb-6">
+          Ce construim. Ce explorăm. Ce vine.
+        </h1>
+        <p class="text-xl text-slate-300 leading-relaxed">
+          Livrăm mic și des. Un instrument simplu ajuns rapid în mâinile oamenilor
+          valorează mai mult decât o platformă completă livrată în 6 luni.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Proiecte active / în explorare -->
+  <Section tone="default">
+    <Container>
+      <div class="mb-12">
+        <p class="text-orange font-medium mb-4 uppercase tracking-wider text-sm">În explorare</p>
+        <h2 class="text-h2">Sterilizare Gratuită</h2>
+      </div>
+
+      <Card class="!p-0 overflow-hidden">
+        <div class="grid md:grid-cols-3">
+          <div class="md:col-span-1 bg-navy text-white p-8 md:p-10 flex flex-col justify-between">
+            <div>
+              <span class="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-orange font-medium mb-6">
+                <span class="w-2 h-2 rounded-full bg-orange animate-pulse"></span>
+                Status: Research în teren
+              </span>
+              <p class="text-slate-300 leading-relaxed mb-6">
+                Quick win care demonstrează competență și atrage partenerii de care avem nevoie pentru proiectele mari.
+              </p>
+            </div>
+            <dl class="space-y-4 pt-6 border-t border-white/10 text-sm">
+              <div>
+                <dt class="text-orange uppercase tracking-wider text-xs mb-1">Piloni atinși</dt>
+                <dd class="text-slate-300">ONG-uri · Cetățeni · Veterinari</dd>
+              </div>
+              <div>
+                <dt class="text-orange uppercase tracking-wider text-xs mb-1">Faza curentă</dt>
+                <dd class="text-slate-300">Interviuri cu ONG-uri care organizează campanii</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="md:col-span-2 p-8 md:p-10 space-y-8">
+            <div>
+              <h3 class="text-h4 mb-3 flex items-center gap-2">
+                <Icon name="lucide:alert-triangle" class="w-5 h-5 text-orange" />
+                Problema
+              </h3>
+              <p class="text-slate-600 leading-relaxed">
+                Zeci de ONG-uri și primării din România organizează campanii de sterilizare gratuite,
+                fiecare pe canalele ei. Informația se publică pe Facebook, într-un grup,
+                pe un site local — și dispare în 48 de ore.
+                Iubitorii de animale nu știu când și unde are loc următoarea campanie în orașul lor.
+                Se pierd mii de sterilizări potențiale pe an.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-h4 mb-3 flex items-center gap-2">
+                <Icon name="lucide:lightbulb" class="w-5 h-5 text-orange" />
+                Abordare
+              </h3>
+              <p class="text-slate-600 leading-relaxed mb-4">
+                Un agregator central unde ONG-urile și primăriile publică campaniile o singură dată,
+                iar cetățenii se abonează la notificări pentru orașul lor.
+                Fără autentificare complicată. Fără app de instalat.
+              </p>
+              <ul class="space-y-2 text-slate-600">
+                <li class="flex items-start gap-3">
+                  <Icon name="lucide:check" class="w-5 h-5 text-success mt-0.5 shrink-0" />
+                  <span>Căutare după oraș și dată</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <Icon name="lucide:check" class="w-5 h-5 text-success mt-0.5 shrink-0" />
+                  <span>Notificări email/SMS când apare o campanie nouă în zonă</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <Icon name="lucide:check" class="w-5 h-5 text-success mt-0.5 shrink-0" />
+                  <span>Panou simplu pentru ONG-uri să publice în 30 de secunde</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-h4 mb-3 flex items-center gap-2">
+                <Icon name="lucide:map" class="w-5 h-5 text-orange" />
+                Cum ajuți
+              </h3>
+              <p class="text-slate-600 leading-relaxed mb-4">
+                Dacă organizezi campanii de sterilizare sau ai acces la date despre ele, scrie-ne.
+                Avem nevoie de perspectiva din teren înainte să scriem prima linie de cod.
+              </p>
+              <Button href="/contact" variant="primary">
+                Vreau să ajut
+                <Icon name="lucide:arrow-right" class="w-5 h-5" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Card>
+    </Container>
+  </Section>
+
+  <!-- Idei în explorare -->
+  <Section tone="muted">
+    <Container>
+      <div class="mb-12 max-w-3xl">
+        <p class="text-orange font-medium mb-4 uppercase tracking-wider text-sm">Ce urmează</p>
+        <h2 class="text-h2 mb-6">Direcții pe care le explorăm.</h2>
+        <p class="text-lg text-slate-600 leading-relaxed">
+          Direcții pe care le avem în minte, dar pe care nu le validăm încă.
+          Nu construim pe bază de entuziasm — așteptăm semnale clare din teren.
+        </p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        {futureIdeas.map((i) => (
+          <Card class="!p-8 h-full">
+            <div class="w-12 h-12 rounded-lg bg-light-grey flex items-center justify-center mb-5">
+              <Icon name={i.icon} class="w-6 h-6 text-navy" />
+            </div>
+            <h3 class="text-h4 mb-3">{i.title}</h3>
+            <p class="text-slate-600 leading-relaxed">{i.text}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Transparență -->
+  <Section tone="default">
+    <Container>
+      <Card class="!p-10 md:!p-14 text-center max-w-3xl mx-auto">
+        <Icon name="lucide:github" class="w-12 h-12 text-navy mx-auto mb-6" />
+        <h2 class="text-h3 mb-4">Totul e public.</h2>
+        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+          Codul, research-ul, deciziile și erorile — toate pe GitHub.
+          Dacă nu putem arăta ce facem și de ce, nu ar trebui să o facem.
+        </p>
+        <Button href="https://github.com/Build4Paws" target="_blank" rel="noopener" variant="secondary">
+          <Icon name="lucide:github" class="w-5 h-5" />
+          github.com/Build4Paws
+        </Button>
+      </Card>
+    </Container>
+  </Section>
+</BaseLayout>
