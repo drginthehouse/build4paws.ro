@@ -4,7 +4,7 @@ export const org = {
   court: "Judecătoria Alba Iulia",
   rulingNumber: "217/2026",
   rulingDate: "21.01.2026",
-  cif: "TBD", // Cod de Identificare Fiscală — de completat
+  cif: "54236826",
   duration: "Nedeterminată",
   email: "contact@build4paws.ro",
   site: "build4paws.ro",
