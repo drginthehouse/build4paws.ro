@@ -4,6 +4,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Container from "../components/Container.astro";
 import Section from "../components/Section.astro";
 import Card from "../components/Card.astro";
+import { org } from "../data/org";
+
+const { cif } = org;
 
 const channels = [
   {
@@ -142,8 +145,8 @@ const audiences = [
                 <dd class="text-slate-600">Nr. 217/2026, 21.01.2026<br />Judecătoria Alba Iulia</dd>
               </div>
               <div>
-                <dt class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">CUI</dt>
-                <dd class="text-slate-600 italic">În curs de obținere</dd>
+                <dt class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">CIF</dt>
+                <dd class="text-slate-600">{cif}</dd>
               </div>
               <div>
                 <dt class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">Email oficial</dt>

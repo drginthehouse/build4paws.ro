@@ -19,18 +19,18 @@
   --font-display: "Funnel Display", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Rethink Sans", ui-sans-serif, system-ui, sans-serif;
 
-  --text-h1: 4rem;
-  --text-h1--line-height: 1.05;
+  --text-h1: clamp(2.25rem, 4vw + 1.25rem, 4rem);
+  --text-h1--line-height: 1.08;
   --text-h1--letter-spacing: -0.02em;
 
-  --text-h2: 3rem;
-  --text-h2--line-height: 1.1;
+  --text-h2: clamp(1.875rem, 3vw + 1rem, 3rem);
+  --text-h2--line-height: 1.12;
   --text-h2--letter-spacing: -0.015em;
 
-  --text-h3: 2.25rem;
+  --text-h3: clamp(1.5rem, 1.5vw + 1rem, 2.25rem);
   --text-h3--line-height: 1.2;
 
-  --text-h4: 1.5rem;
+  --text-h4: clamp(1.25rem, 0.5vw + 1rem, 1.5rem);
   --text-h4--line-height: 1.3;
 }
 
