@@ -87,16 +87,12 @@ const audiences = [
             class="no-underline group"
           >
             <Card class="!p-8 h-full hover:!border-orange transition-colors">
-              <div class="flex items-start gap-5">
-                <div class="shrink-0 w-12 h-12 rounded-lg bg-navy flex items-center justify-center group-hover:bg-orange transition-colors">
-                  <Icon name={c.icon} class="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-1">{c.label}</p>
-                  <p class="text-h4 !text-navy !mb-2 group-hover:!text-orange transition-colors">{c.value}</p>
-                  <p class="text-slate-600 leading-relaxed">{c.note}</p>
-                </div>
+              <div class="w-12 h-12 rounded-lg bg-navy flex items-center justify-center mb-5 group-hover:bg-orange transition-colors">
+                <Icon name={c.icon} class="w-6 h-6 text-white" />
               </div>
+              <p class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">{c.label}</p>
+              <p class="font-display font-semibold text-lg !text-navy mb-2 break-all group-hover:!text-orange transition-colors">{c.value}</p>
+              <p class="text-slate-600 leading-relaxed">{c.note}</p>
             </Card>
           </a>
         ))}
