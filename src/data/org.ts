@@ -5,6 +5,7 @@ export const org = {
   rulingNumber: "217/2026",
   rulingDate: "21.01.2026",
   cif: "54236826",
+  address: "Str. 21 Decembrie 1989-F nr. 123, Cugir, jud. Alba",
   duration: "Nedeterminată",
   email: "contact@build4paws.ro",
   site: "build4paws.ro",
