@@ -6,7 +6,7 @@ import Section from "../components/Section.astro";
 import Card from "../components/Card.astro";
 import { org } from "../data/org";
 
-const { cif } = org;
+const { cif, address } = org;
 
 const principles = [
   {
@@ -197,6 +197,10 @@ const founders = [
           <div>
             <dt class="text-xs uppercase tracking-wider text-orange font-medium mb-2">CIF</dt>
             <dd>{cif}</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-orange font-medium mb-2">Sediu</dt>
+            <dd>{address}</dd>
           </div>
           <div>
             <dt class="text-xs uppercase tracking-wider text-orange font-medium mb-2">Contact</dt>
