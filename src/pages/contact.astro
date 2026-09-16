@@ -6,7 +6,7 @@ import Section from "../components/Section.astro";
 import Card from "../components/Card.astro";
 import { org } from "../data/org";
 
-const { cif } = org;
+const { cif, address } = org;
 
 const channels = [
   {
@@ -164,6 +164,10 @@ const audiences = [
               <div>
                 <dt class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">CIF</dt>
                 <dd class="text-slate-600">{cif}</dd>
+              </div>
+              <div>
+                <dt class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">Sediu</dt>
+                <dd class="text-slate-600">{address}</dd>
               </div>
               <div>
                 <dt class="text-xs uppercase tracking-wider text-slate-600 font-medium mb-2">Email oficial</dt>
