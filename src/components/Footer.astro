@@ -1,5 +1,6 @@
 ---
 import Container from "./Container.astro";
+import { org } from "../data/org";
 
 const year = new Date().getFullYear();
 ---
@@ -56,8 +57,9 @@ const year = new Date().getFullYear();
 
     <div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-sm text-slate-300">
       <div>
-        <p>© {year} Asociația Build 4 Paws</p>
-        <p class="mt-1">OG 26/2000 · Încheiere nr. 217/2026 · Judecătoria Alba Iulia</p>
+        <p>© {year} {org.name} · CUI {org.cif}</p>
+        <p class="mt-1">Sediu: {org.address}</p>
+        <p class="mt-1">OG 26/2000 · Încheiere nr. {org.rulingNumber} · {org.court}</p>
       </div>
       <div class="flex gap-6">
         <a href="/privacy" class="text-slate-300 hover:text-orange no-underline">Politica de confidențialitate</a>
